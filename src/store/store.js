@@ -8,7 +8,7 @@ export default new Vuex.Store({
         sum:0
     },
     getter:{
-        getSum(state){
+        result:state=>{
             return state.sum
         }
     },

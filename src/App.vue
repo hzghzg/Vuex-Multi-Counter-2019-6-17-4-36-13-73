@@ -1,22 +1,25 @@
 <template>
   <div id="app">
-    <counter-group></counter-group>
+    <component v-bind:is="currentComponent"></component>
   </div>
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld'
 import CounterGroup from './components/CounterGroup.vue'
+import route from './components/router/route.js'
 export default {
   name: 'app',
   data(){
     return{
+      currentComponent:route('/hello')?HelloWorld:CounterGroup,
       count:0,
       data1:null
     };
   },
   components: {
-    CounterGroup
+    CounterGroup,
+    HelloWorld
   }
 }
 </script>
