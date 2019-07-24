@@ -3,11 +3,12 @@ import App from './App.vue'
 import store from "./store/store.js"
 import VueRouter from 'vue-router'
 // import HelloWorld from "../src/components/HelloWorld.vue"
-// import CounterGroup from "../src/components/CounterGroup.vue"
+ import CounterGroup from "../src/components/CounterGroup.vue"
 // import Java from "../src/components/Java.vue"
 // import Cool from "../src/components/Cool.vue"
-import Caixukun from "../src/components/Caixukun.vue"
-import CaixukunPage from "../src/components/CaixukunPage.vue"
+// import Caixukun from "../src/components/Caixukun.vue"
+// import CaixukunPage from "../src/components/CaixukunPage.vue"
+ import Sum from "../src/components/Sum.vue"
 
 Vue.config.productionTip = false
 
@@ -48,12 +49,17 @@ const router=new VueRouter({
   //   }
   // ]
 
-  routes: [
-    // 动态路径参数 以冒号开头
-    { path: '/caixukun/:id', component: Caixukun },
-    { path: '/caixukun/:id/message/:page', component: CaixukunPage }
-  ]
-
+//动态路由匹配
+  // routes: [
+  //   // 动态路径参数 以冒号开头
+  //   { path: '/caixukun/:id', component: Caixukun },
+  //   { path: '/caixukun/:id/message/:page', component: CaixukunPage }
+  // ]
+routes: [
+     // 动态路径参数 以冒号开头
+     { path: '/counter', component: CounterGroup },
+     { path: '/sum/:id', component: Sum }
+   ]
 });
 new Vue({
   render: h => h(App),

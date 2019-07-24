@@ -1,6 +1,6 @@
 <template>
   <div id="countergroup">
-      <input type="text" v-model="counterNum" @input="resetSum">
+      <input type="text" v-model="counterNum" @input="resetSum" @change="jump" >
       <div v-if="counterNum"  >
           <counter v-for="index in parseInt(counterNum)" :key="index"></counter>
       </div>
@@ -20,6 +20,9 @@ export default {
     resetSum(){
       if(this.counterNum==0)
        this.$store.commit('resetSum')
+    },
+    jump(){
+      this.$router.push({path:`/sum/${this.counterNum}`})
     }
   },
   components: {
