@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <!-- <component v-bind:is="currentComponent"></component> -->
-    <router-view/>
+    <router-view class="view one"></router-view>
+    <router-view class="view two" name="a"></router-view>
   </div>
 </template>
 
