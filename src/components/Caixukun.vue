@@ -1,12 +1,12 @@
 <template>
-  <div class="java">
-    <h1>Java</h1>
+  <div class="Caixukun">
+    <h1>{{$route.params.id}}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Java',
+  name: 'Caixukun',
   props: {
     msg: String
   }
@@ -29,7 +29,7 @@ li {
 a {
   color: #42b983;
 }
-.java{
+.hello{
   border:1px solid red
 }
 </style>
