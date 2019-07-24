@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <!-- <component v-bind:is="currentComponent"></component> -->
-    <router-view></router-view>
-
+    <!-- <router-view></router-view> -->
+    <counter-group></counter-group>
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld'
-// import CounterGroup from './components/CounterGroup.vue'
+ import CounterGroup from './components/CounterGroup.vue'
 // import route from './components/router/route.js'
 export default {
   name: 'app',
@@ -20,6 +20,7 @@ export default {
     };
   },
   components: {
+    CounterGroup
   }
 }
 </script>

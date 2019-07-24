@@ -1,6 +1,5 @@
 <template>
   <div id="counter">
-    <!-- <p>{{count}}</p> -->
     <p>{{count}}</p>
     <label><input type="button" value="点我+" @click="add" ></label>
     <label><input type="button" value="点我-" @click="sub"></label>
